@@ -1,0 +1,53 @@
+.container{
+    position: fixed; /* toda la pantalla*/
+    top: 0;
+    left: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    z-index: 1;
+    background-color: rgba(0,0,0,0.4);
+    
+    
+  }
+form{
+    background-color: aliceblue;
+    margin: 5% auto 15% auto;
+    padding: 20px;
+    border-radius: 4px;
+    border: 1px solid black;
+    width: 30%;
+}
+input{
+    width: 100%;
+    padding:5px 10px;
+    border-radius: 4px;
+    box-sizing: border-box;
+
+}
+input[type=submit]{
+    width: 40%;
+    float: right;
+    
+}
+input[type=submit]:hover{
+    background-color: black;
+    color: rgb(255, 255, 255);
+}
+button{
+    width: 40%;
+    background-color: aliceblue;
+    padding: 0%;
+    border-radius: 4px;
+}
+a{
+    text-align: center;
+    text-decoration: none;
+    display: block;
+    padding: 5px;
+    color: black;
+    
+}
+a:hover{
+    background-color: red;
+    color:white;
+}

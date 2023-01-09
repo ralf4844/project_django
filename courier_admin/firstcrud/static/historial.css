@@ -1,0 +1,43 @@
+.container{
+    padding: 30px 100px 0px 100px;
+}
+table{
+    border-collapse: collapse;
+    width: 100%;
+    padding-top:30px;
+}
+th,td{
+    text-align: left;
+    padding: 10px;
+}
+tr:nth-child(even){background-color: #f2f2f2}
+th{
+    background-color: rgb(1, 29, 25);
+    color: white;
+}
+select,input{
+    padding: 8px;
+}
+button{
+    float: right;
+    
+    
+}
+.container a{
+    text-decoration: none;
+    float: right;
+    padding: 8px;
+    background-color:#f2f2f2 ;
+    color:black;
+    border: 1px solid black;
+    
+}
+.container a:hover{
+    background-color:  rgb(1, 29, 25);
+    color: white;
+       
+}
+input.buscar:hover{
+    background-color: rgb(1, 29, 25);
+    color: white;
+}

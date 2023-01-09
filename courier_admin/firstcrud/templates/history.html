@@ -1,0 +1,69 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<link rel="stylesheet" href="{% static 'main.css' %}">
+<link rel="stylesheet" href="{% static 'historial.css' %}">
+<body>
+
+  <h1>SHIPPING HISTORY to all Peru</h1>
+<div class="topnav">
+        <a href="/main/">HOME</a>
+        <a href="/main/clients/">MY CLIENTS</a>
+        <a href="/main/history/">HISTORY </a>
+</div>
+
+<div class ="container">
+    <Table >
+        <tr >
+
+            <form action="/filter/" method="post">
+                {% csrf_token %}
+                <input class="buscar" type="submit" value="Search for">&nbsp;&nbsp;
+                <select name="atributo" id="atributo">
+                    <option value="firstname"> firstname</option>
+                    <option value="lastname">lastname</option>
+                    <option value="dni"> DNI</option>
+                </select>
+                 &nbsp;&nbsp;
+                <input type="text" name="input_value">
+                <a href="/main/history/"> Refresh</a>
+                
+                
+
+            </form> 
+            
+        </tr>
+       <tr>
+        <th>Id</th>
+        <th>Firstname</th>
+        <th>Lastname</th>
+        <th>DNI</th>
+        <th>Origin</th>
+        <th>Destiny</th>
+        <th>Description</th>
+        <th>Date</th>
+       </tr>
+        
+        {% for x in myclients %}
+         <tr>
+            <td>{{ x.id}}</td>
+            <td>{{x.firstname}}</td>
+            <td>{{x.lastname}}</td>
+            <td>{{x.dni}}</td>
+            <td>{{x.origin}}</td>
+            <td>{{x.destiny}}</td>
+            <td>{{x.description}}</td>
+            <td>{{x.datatime}}</td>
+        </tr>
+        {% endfor %}
+    </table>
+</div>
+</body>
+</html>
